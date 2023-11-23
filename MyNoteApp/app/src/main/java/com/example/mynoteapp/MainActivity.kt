@@ -43,8 +43,6 @@ class MainActivity : AppCompatActivity(), NotesAdapter.NotesClickListener, Popup
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initUI()
-
         viewModel = ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(NoteViewModel::class.java)
 
@@ -55,6 +53,8 @@ class MainActivity : AppCompatActivity(), NotesAdapter.NotesClickListener, Popup
             }
 
         database = NoteDatabase.getDatabase(this)
+
+        initUI()
     }
 
     private fun initUI() {
@@ -77,6 +77,7 @@ class MainActivity : AppCompatActivity(), NotesAdapter.NotesClickListener, Popup
         binding.fbAddNote.setOnClickListener {
             val intent = Intent(this, AddNote::class.java)
             getContent.launch(intent)
+            //this.startActivity(intent)
         }
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
