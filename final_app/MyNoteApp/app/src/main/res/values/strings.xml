@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyNoteApp</string>
+    <string name="desc" />
+    <string name="frag_count">Note Count: 0</string>
+    <string name="frag_latest">Latest note</string>
+    <string name="rv_header_text">Your notes:</string>
+    <string name="pop_up_menu_title">Delete</string>
+
+    <string name="list_item_title">Title</string>
+    <string name="list_item_note">Note</string>
+    <string name="list_item_date">Date</string>
+
+    <string name="fb_btn_desc">Add button</string>
+
+    <string name="add_note_title">Title</string>
+    <string name="add_note_desc">Note description</string>
+</resources>
